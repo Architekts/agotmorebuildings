@@ -1,0 +1,131 @@
+﻿lp_feudal_government = {
+	create_cadet_branches = yes
+	rulers_should_have_dynasty = yes
+	dynasty_named_realms = yes
+	royal_court = yes
+
+	fallback = 1
+
+	primary_holding = castle_holding
+	valid_holdings = { ruin_holding }
+	required_county_holdings = { castle_holding }
+
+	can_get_government = { #Triggers other than faith don't seem to work
+		OR = {
+			agot_is_valid_lp_feudal_government_target = yes
+			any_liege_or_above = { agot_is_valid_lp_feudal_government_target = yes }
+		}
+		NOT = {
+			any_liege_or_above = { has_trait = nightswatch }
+		}
+	}
+
+	vassal_contract = {
+		feudal_government_taxes
+		feudal_government_levies
+		special_contract
+		religious_rights
+		fortification_rights
+		coinage_rights
+		war_declaration_rights
+		council_rights
+		title_revocation_rights
+		marriage_favor_rights
+	}
+
+	flag = government_is_feudal
+	color = rgb{ 130 100 100 }
+}
+
+#Sadly this isn't working
+#All checks for this government were replaced with checks for title:d_the_citadel
+the_citadel_government = {
+	create_cadet_branches = no
+	rulers_should_have_dynasty = no
+	dynasty_named_realms = no
+
+	#primary_holding = city_holding
+	#required_county_holdings = { city_holding }
+
+	can_get_government = {
+		OR = {
+			has_title = title:d_the_citadel
+		}
+	}
+
+	#vassal_contract = {
+	#	feudal_government_taxes
+	#	feudal_government_levies
+	#	special_contract
+	#	religious_rights
+	#	fortification_rights
+	#	coinage_rights
+	#	succession_rights
+	#	war_declaration_rights
+	#	council_rights
+	#	title_revocation_rights
+	#}
+
+	color = rgb{ 128 128 128 }
+}
+
+nights_watch_government = {
+	create_cadet_branches = no
+	rulers_should_have_dynasty = no
+	dynasty_named_realms = no
+
+	fallback = 1
+
+	primary_holding = castle_holding
+	required_county_holdings = { castle_holding city_holding }
+	royal_court = yes
+
+	can_get_government = {
+		OR = {
+			has_title = title:k_the_wall
+			# AND = {
+			# 	agot_is_independent_ruler = no
+			# 	liege = {
+			# 		has_government = nights_watch_government
+			# 	}
+			# }
+		}
+	}
+	character_modifier = {
+		monthly_dread = 0.5 #scary man
+		army_maintenance_mult = -0.8 #army don't get a regular soldier salary
+		men_at_arms_maintenance = -0.9 #army don't get a regular soldier salary
+		martial_per_prestige_level = 2 #famous smart stronkly
+		prowess_per_prestige_level = 2 #famous stronk
+		holy_order_hire_cost_mult = 1000
+	}
+
+	vassal_contract = {
+		watch_centralization
+		watch_special_contract
+	}
+
+	color = hsv{ 0.9 0.0 0.22 }
+}
+
+ruins_government = {
+	create_cadet_branches = no
+	rulers_should_have_dynasty = no
+	dynasty_named_realms = no
+
+	primary_holding = ruin_holding
+	valid_holdings = { ruin_holding castle_holding city_holding church_holding }
+	required_county_holdings = { ruin_holding city_holding castle_holding church_holding }
+
+	ai = {
+		arrange_marriage = no
+		use_goals = no
+		use_scripted_guis = no
+		perform_religious_reformation = no
+	}
+
+	vassal_contract = {
+	}
+
+	color = hsv{ 1 0.0 0.1 }
+}

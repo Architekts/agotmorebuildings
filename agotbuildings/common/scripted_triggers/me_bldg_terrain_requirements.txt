@@ -1,0 +1,28 @@
+building_orchards_requirement_terrain = {
+	OR = {
+		terrain = floodplains
+		terrain = oasis
+		terrain = forest
+		terrain = taiga
+	}
+}
+
+building_urban_requirements_terrain = {
+	terrain = urban
+}
+
+building_steppehills_requirement_terrain = {
+	OR = {
+		terrain = steppe
+		terrain = majorroad_steppe
+		terrain = minorroad_steppe
+		
+		terrain = hills
+		terrain = majorroad_hills
+		terrain = minorroad_hills
+		
+		terrain = plains
+		terrain = majorroad_plains
+		terrain = minorroad_plains
+	}
+}

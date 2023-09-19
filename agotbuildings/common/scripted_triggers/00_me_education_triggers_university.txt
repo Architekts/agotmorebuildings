@@ -1,0 +1,3 @@
+has_university_building_trigger = {
+	has_building_or_higher = agot_urbanschool_03
+}

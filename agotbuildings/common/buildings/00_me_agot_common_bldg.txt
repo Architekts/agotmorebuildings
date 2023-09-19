@@ -1,0 +1,1895 @@
+agot_castle_town_01 = {
+	construction_time = quick_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		
+		NOT = {
+			building_urban_requirements_terrain = yes
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_1
+	}
+	county_modifier = {
+		development_growth_factor = 0.05
+	}
+	levy = poor_building_levy_tier_1
+	
+	next_building = agot_castle_town_02
+
+	type_icon = "icon_building_leisure_palace.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_castle_town_02 = {
+	construction_time = quick_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		trigger_if = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_2_cost
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_2
+	}
+	county_modifier = {
+		development_growth_factor = 0.1
+	}
+	levy = poor_building_levy_tier_2
+	
+	
+	next_building = agot_castle_town_03
+	ai_value = {
+		base = 9
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for upgrades
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+}
+
+agot_castle_town_03 = {
+	construction_time = quick_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		trigger_if = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+		}
+		trigger_if = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_3_cost
+	
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_3
+	}
+	county_modifier = {
+		development_growth_factor = 0.15
+	}
+	
+	levy = good_building_levy_tier_3
+	
+	next_building = agot_castle_town_04
+	
+	ai_value = {
+		base = 8
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+agot_castle_town_04 = {
+	construction_time = quick_construction_time
+
+	can_construct_potential = {
+		
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		trigger_if = {
+			culture = {
+				has_innovation = innovation_manorialism
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_4_cost
+		province_modifier = {
+		monthly_income = excellent_building_tax_tier_4
+	}
+	county_modifier = {
+		development_growth_factor = 0.2
+		tax_mult = 0.02
+	}
+	
+	levy = good_building_levy_tier_4
+
+	next_building = agot_castle_town_05
+	
+	ai_value = {
+		base = 7
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+agot_castle_town_05 = {
+	construction_time = quick_construction_time
+
+	can_construct_potential = {
+		
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		trigger_if = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_5_cost
+	
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_5
+	}
+	county_modifier = {
+		development_growth_factor = 0.25
+		tax_mult = 0.04
+	}
+	
+	levy = good_building_levy_tier_5
+	
+	next_building = agot_castle_town_06
+	ai_value = {
+		base = 6
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+agot_castle_town_06 = {
+	construction_time = quick_construction_time
+
+	can_construct_potential = {
+		
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		trigger_if = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_6_cost
+	
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_6
+	}
+	county_modifier = {
+		development_growth_factor = 0.3
+		tax_mult = 0.05
+	}
+	
+	levy = good_building_levy_tier_6
+	
+	next_building = agot_castle_town_07
+	ai_value = {
+		base = 5
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+agot_castle_town_07 = {
+	construction_time = quick_construction_time
+
+	can_construct_potential = {
+		
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		trigger_if = {
+			culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_7_cost
+	
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_7
+	}
+	county_modifier = {
+		development_growth_factor = 0.35
+		tax_mult = 0.08
+	}
+	
+	levy = excellent_building_levy_tier_7
+	
+	next_building = agot_castle_town_08
+	ai_value = {
+		base = 4
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+agot_castle_town_08 = {
+	construction_time = quick_construction_time
+
+	can_construct_potential = {
+		
+	}
+	can_construct = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		trigger_if = {
+			culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_8_cost
+	
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_8
+	}
+	county_modifier = {
+		development_growth_factor = 0.4
+		tax_mult = 0.1
+	}
+	
+	levy = excellent_building_levy_tier_8
+	
+	ai_value = {
+		base = 3
+		ai_general_building_modifier = yes
+		ai_economical_building_preference_modifier = yes
+	}
+}
+
+
+
+
+agot_pleasureden_01 = {
+	construction_time = quick_construction_time
+	next_building = agot_pleasureden_02
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	character_modifier = {
+		monthly_prestige = -0.5
+		stress_loss_mult = 0.03
+	}
+	cost_gold = normal_building_tier_1_cost
+	
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_1
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = -0.2
+	}
+
+	type_icon = "icon_building_pleasureden.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_pleasureden_02 = {
+	next_building = agot_pleasureden_03
+	construction_time = quick_construction_time
+	
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	character_modifier = {
+		monthly_prestige = -0.35
+		stress_loss_mult = 0.04
+	}
+	cost_gold = normal_building_tier_2_cost
+	
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_2
+	}
+	
+	county_modifier ={
+		monthly_county_control_change_add = -0.1
+	}
+
+	type_icon = "icon_building_pleasureden.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_pleasureden_03 = {
+	next_building = agot_pleasureden_04
+	construction_time = standard_construction_time
+	
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	character_modifier = {
+		monthly_piety = -0.3
+		monthly_prestige = -0.25
+		stress_loss_mult = 0.04
+	}
+	cost_gold = normal_building_tier_3_cost
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_3
+	}
+	
+
+	type_icon = "icon_building_pleasureden.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_pleasureden_04 = {
+	next_building = agot_pleasureden_05
+	construction_time = standard_construction_time
+	
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	character_modifier = {
+		monthly_piety = -0.3
+		stress_loss_mult = 0.10
+		monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
+		personal_scheme_power_mult	= 0.04
+		scheme_discovery_chance_mult = 0.05
+		clergy_opinion = -7
+	}
+	cost_gold = normal_building_tier_4_cost
+	
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_4
+	}
+	
+
+	type_icon = "icon_building_pleasureden.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_pleasureden_05 = {
+	construction_time = standard_construction_time
+	
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	character_modifier = {
+		stress_loss_mult = 0.15
+		diplomacy = 1
+		intrigue = 1
+		monthly_piety = -0.6
+		monthly_diplomacy_lifestyle_xp_gain_mult = 0.1
+		monthly_intrigue_lifestyle_xp_gain_mult = 0.1
+		personal_scheme_power_mult	= 0.08
+		scheme_discovery_chance_mult = 0.15
+		clergy_opinion = -10
+	}
+	cost_gold = normal_building_tier_5_cost
+	
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_5
+	}
+	
+	
+	type_icon = "icon_building_pleasureden.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+
+
+agot_urbanadmin_01 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanadmin_02
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	character_modifier = {
+		stress_loss_mult = 0.02
+		tyranny_gain_mult = 0.1
+	}
+	
+	province_modifier = {
+		tax_mult = -0.1
+		levy_size = -0.1
+		garrison_size = 0.1
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = 0.1
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanadmin_02 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanadmin_03
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_2_cost
+	
+	character_modifier = {
+		stress_loss_mult = 0.02
+	}
+	
+	province_modifier = {
+		tax_mult = -0.2
+		levy_size = -0.2
+		garrison_size = 0.2
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = 0.2
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanadmin_03 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanadmin_04
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	
+	province_modifier = {
+		tax_mult = -0.3
+		levy_size = -0.3
+		garrison_size = 0.3
+	}
+	
+	character_modifier = {
+		stress_loss_mult = 0.05
+		domain_limit = 1
+	}
+
+
+
+	
+	county_modifier ={
+		monthly_county_control_change_add = 0.3
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanadmin_04 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_4_cost
+	
+	
+	province_modifier = {
+		tax_mult = -0.5
+		levy_size = -0.5
+		garrison_size = 0.3
+	}
+	
+	character_modifier = {
+		stress_loss_mult = 0.1
+		domain_limit = 2
+		tyranny_gain_mult = 0.1
+	}
+
+
+
+	
+	county_modifier ={
+		monthly_county_control_change_add = 0.4
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+
+
+agot_urbanmarket_01 = {
+	construction_time = quick_construction_time
+	next_building = agot_urbanmarket_02
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	character_modifier = {
+		stress_gain_mult = 0.04
+	}
+	
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_1
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = -0.4
+	}
+
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanmarket_02 = {
+	construction_time = quick_construction_time
+	next_building = agot_urbanmarket_03
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_2_cost
+	
+
+	province_modifier = {
+		monthly_income = normal_building_tax_tier_2
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = -0.2
+	}
+	
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanmarket_03 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanmarket_04
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_3_cost
+	
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_3
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.03
+	}
+	
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanmarket_04 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanmarket_05
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_4_cost
+	
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_4
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		tax_mult = 0.03
+	}
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanmarket_05 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanmarket_06
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_5_cost
+	
+	character_modifier = {
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.05
+	}
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.1
+		tax_mult = 0.1
+		build_gold_cost = -0.05
+		monthly_county_control_change_add = -0.3
+	}
+	
+	duchy_capital_county_modifier = {
+		tax_mult = 0.03
+	}
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanmarket_06 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanmarket_07
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_6_cost
+	
+	character_modifier = {
+		stress_gain_mult = 0.03
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+		direct_vassal_opinion = 10
+	}
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_6
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.15
+		tax_mult = 0.15
+		build_gold_cost = -0.10
+		monthly_county_control_change_add = -0.6
+	}
+	
+	duchy_capital_county_modifier = {
+		tax_mult = 0.10
+		build_gold_cost = -0.05
+	}
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanmarket_07 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanmarket_08
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_7_cost
+	
+	character_modifier = {
+		stress_gain_mult = 0.05
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.15
+		different_culture_opinion = 10
+		direct_vassal_opinion = 10
+		monthly_dynasty_prestige = 0.2
+		monthly_dynasty_prestige_mult	= 0.05
+	}
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_7
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.3
+		tax_mult = 0.25
+		build_gold_cost = -0.15
+		monthly_county_control_change_add = -0.8
+	}
+	
+	duchy_capital_county_modifier = {
+		tax_mult = 0.12
+		build_gold_cost = -0.10
+	}
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanmarket_08 = {
+	construction_time = slow_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 05 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_8_cost
+	
+	character_modifier = {
+		stress_gain_mult = 0.1
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.2
+		direct_vassal_opinion = 15
+		different_culture_opinion = 15
+		monthly_dynasty_prestige = 0.5
+		monthly_dynasty_prestige_mult	= 0.1
+	}
+
+	province_modifier = {
+		monthly_income = excellent_building_tax_tier_8
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.5
+		tax_mult = 0.5
+		build_gold_cost = -0.20
+		monthly_county_control_change_add = -1.4
+	}
+	
+	duchy_capital_county_modifier = {
+		tax_mult = 0.2
+		build_gold_cost = -0.15
+	}
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+
+
+agot_urbanhouses_01 = {
+	construction_time = quick_construction_time
+	next_building = agot_urbanhouses_02
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	levy = 1500
+
+
+	county_modifier ={
+		monthly_county_control_change_add = -0.5
+		development_growth_factor = -0.2
+	}
+
+	type_icon = "icon_structure_alhambra.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanhouses_02 = {
+	construction_time = quick_construction_time
+	next_building = agot_urbanhouses_03
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_2_cost
+	
+
+	levy = 2000
+
+
+	county_modifier ={
+		monthly_county_control_change_add = -0.3
+		development_growth_factor = -0.1
+	}
+	
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanhouses_03 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanhouses_04
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_3_cost
+	
+
+	levy = 2750
+	max_garrison = 750
+
+
+	county_modifier ={
+		monthly_county_control_change_add = -0.5
+		development_growth_factor = -0.1
+	}
+	
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanhouses_04 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanhouses_05
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_4_cost
+	
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_1
+	}
+
+	levy = 4000
+	max_garrison = 1250
+
+	county_modifier ={
+		monthly_county_control_change_add = -0.5
+	}
+	
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanhouses_05 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanhouses_06
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 03 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_5_cost
+	
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_2
+	}
+
+	levy = 5000
+	max_garrison = 1500
+
+	county_modifier ={
+		monthly_county_control_change_add = -0.6
+	}
+
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanhouses_06 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanhouses_07
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_6_cost
+	
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.05
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_2
+	}
+
+	levy = 5500
+	max_garrison = 1750
+
+	county_modifier ={
+		monthly_county_control_change_add = -1
+				county_opinion_add = -5
+	}
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanhouses_07 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanhouses_08
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_7_cost
+	
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.04
+		knight_limit = 2
+		monthly_dynasty_prestige_mult	= 0.05
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_2
+	}
+
+	levy = 5500
+	max_garrison = 1750
+
+	county_modifier ={
+		monthly_county_control_change_add = -1.5
+		county_opinion_add = -10
+		development_growth_factor = 0.2
+	}
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanhouses_08 = {
+	construction_time = slow_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 05 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	
+	cost_gold = normal_building_tier_8_cost
+	
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.08
+		monthly_dynasty_prestige_mult	= 0.1
+		knight_limit = 4
+	}
+
+	province_modifier = {
+		monthly_income = poor_building_tax_tier_3
+	}
+
+	levy = 7500
+	max_garrison = 2500
+
+	county_modifier ={
+		monthly_county_control_change_add = -2.5
+		county_opinion_add = -15
+		development_growth_factor = 0.35
+	}
+	
+	
+	type_icon = "icon_structure_university_of_siena.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+
+
+
+agot_urbanwatch_01 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanwatch_02
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	character_modifier = {
+		tyranny_gain_mult = 0.1
+	}
+	
+	province_modifier = {
+		stationed_skirmishers_damage_mult = normal_maa_damage_tier_1
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_1
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_1
+		travel_danger = -1
+		levy_size = -0.05
+	}
+	county_modifier ={
+		monthly_county_control_change_add = 1
+	}
+
+	type_icon = "icon_city_watch.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanwatch_02 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanwatch_03
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_2_cost
+	
+	character_modifier = {
+		stress_loss_mult = 0.02
+	}
+	
+	province_modifier = {
+		tax_mult = -0.05
+		levy_size = -0.1
+		garrison_size = 0.05
+		stationed_skirmishers_toughness_mult = low_maa_toughness_tier_1
+		stationed_skirmishers_damage_mult = normal_maa_damage_tier_2
+		stationed_pikemen_toughness_mult = low_maa_toughness_tier_1
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_2
+		stationed_heavy_infantry_toughness_mult = low_maa_toughness_tier_1
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_2
+		travel_danger = -2
+		
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = 1.5
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanwatch_03 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanwatch_04
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	
+	province_modifier = {
+		tax_mult = -0.1
+		levy_size = -0.2
+		garrison_size = 0.1
+		stationed_skirmishers_toughness_mult = low_maa_toughness_tier_2
+		stationed_skirmishers_damage_mult = normal_maa_damage_tier_3
+		stationed_pikemen_toughness_mult = low_maa_toughness_tier_2
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_3
+		stationed_heavy_infantry_toughness_mult = low_maa_toughness_tier_2
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_3
+		travel_danger = -3
+	}
+	
+	character_modifier = {
+		stress_loss_mult = 0.05
+
+	}
+
+	
+	county_modifier ={
+		monthly_county_control_change_add = 2.5
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanwatch_04 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_4_cost
+	
+	
+	province_modifier = {
+		tax_mult = -0.15
+		levy_size = -0.3
+		garrison_size = 0.2
+		stationed_skirmishers_toughness_mult = low_maa_toughness_tier_2
+		stationed_skirmishers_damage_mult = normal_maa_damage_tier_3
+		stationed_pikemen_toughness_mult = low_maa_toughness_tier_2
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_3
+		stationed_heavy_infantry_toughness_mult = low_maa_toughness_tier_2
+		stationed_heavy_infantry_damage_mult = normal_maa_damage_tier_3
+		travel_danger = -4
+	}
+	
+	character_modifier = {
+		stress_loss_mult = 0.1
+		tyranny_gain_mult = 0.2
+		dread_gain_mult= 0.1
+	}
+	
+	county_modifier ={
+		monthly_county_control_change_add = 4
+		monthly_county_control_change_factor = 0.05
+		county_opinion_add = -10
+	}
+
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+
+agot_urbanschool_01 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanschool_02
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	character_modifier = {
+		cultural_head_fascination_mult = 0.01
+	}
+	
+	province_modifier = {
+		tax_mult = -0.04
+	}
+
+	county_modifier ={
+		development_growth_factor = 0.05
+	}
+
+	type_icon = "icon_structure_temple_of_uppsala.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanschool_02 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanschool_03
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_2_cost
+	
+	character_modifier = {
+		cultural_head_fascination_mult = 0.03
+	}
+	
+	province_modifier = {
+		tax_mult = -0.08
+	}
+
+	county_modifier ={
+		development_growth_factor = 0.1
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanschool_03 = {
+	construction_time = standard_construction_time
+	next_building = agot_urbanschool_04
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	
+	character_modifier = {
+		cultural_head_fascination_mult = 0.05
+		monthly_learning_lifestyle_xp_gain_mult = 0.05
+	}
+	
+	county_holder_character_modifier = {
+		cultural_head_fascination_mult = 0.05
+		monthly_learning_lifestyle_xp_gain_mult = 0.05 
+	}
+	
+	province_modifier = {
+		tax_mult = -0.15
+	}
+
+	county_modifier ={
+		development_growth_factor = 0.15
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanschool_04 = {
+	next_building = agot_urbanschool_05
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_4_cost
+	
+	
+	character_modifier = {
+		cultural_head_fascination_mult = 0.08
+		monthly_learning_lifestyle_xp_gain_mult = 0.10
+	}
+	
+	county_holder_character_modifier = {
+		cultural_head_fascination_mult = 0.08
+		monthly_learning_lifestyle_xp_gain_mult = 0.1
+	}
+	
+	province_modifier = {
+		tax_mult = -0.2
+	}
+
+	county_modifier ={
+		development_growth_factor = 0.25
+	}
+
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_urbanschool_05= {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_urban_requirements_terrain = yes
+	}
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_4_cost
+	
+	
+	cost_gold = normal_building_tier_4_cost
+	
+	county_holder_character_modifier = {
+		cultural_head_fascination_mult = 0.12
+		monthly_learning_lifestyle_xp_gain_mult = 0.2
+		monthly_lifestyle_xp_gain_mult = 0.05
+	}
+	
+	character_modifier = {
+		cultural_head_fascination_mult = 0.12
+		monthly_learning_lifestyle_xp_gain_mult = 0.20
+		monthly_lifestyle_xp_gain_mult = 0.05
+		monthly_dynasty_prestige_mult	= 0.05
+	}
+	
+	province_modifier = {
+		tax_mult = -0.25
+	}
+
+	county_modifier ={
+		development_growth_factor = 0.35
+	}
+	
+	type_icon = "icon_building_hall_of_heroes.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+
+agot_barrow_01 = {
+	construction_time = standard_construction_time
+	next_building = agot_barrow_02
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_steppehills_requirement_terrain = yes
+		county.culture = { has_cultural_tradition = agot_tradition_barrowman }
+		scope:holder.culture = { has_cultural_tradition = agot_tradition_barrowman }
+	}
+
+	is_enabled = {
+		scope:holder.culture = { has_cultural_tradition = agot_tradition_barrowman }
+		county.culture = { has_cultural_tradition = agot_tradition_barrowman }
+	}
+	show_disabled = yes
+
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_1_cost
+	
+	character_modifier = {
+		monthly_dynasty_prestige_mult	= 0.02
+	}
+	
+	province_modifier = {
+		defender_holding_advantage = normal_building_advantage_tier_2
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = 0.2
+		county_opinion_add = 3
+	}
+
+	type_icon = "gibraltar.dds"
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_barrow_02 = {
+	construction_time = standard_construction_time
+	next_building = agot_barrow_03
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_steppehills_requirement_terrain = yes
+		county.culture = { has_cultural_tradition = agot_tradition_barrowman }
+		scope:holder.culture = { has_cultural_tradition = agot_tradition_barrowman }
+	}
+
+	is_enabled = {
+		scope:holder.culture = { has_cultural_tradition = agot_tradition_barrowman }
+		county.culture = { has_cultural_tradition = agot_tradition_barrowman }
+	}
+	
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_2_cost
+	
+	character_modifier = {
+		monthly_dynasty_prestige_mult	= 0.05
+	}
+	
+	province_modifier = {
+		defender_holding_advantage = normal_building_advantage_tier_4
+		stationed_pikemen_toughness_mult = low_maa_toughness_tier_1
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_1
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = 0.3
+		county_opinion_add = 6
+	}
+
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_barrow_03 = {
+	construction_time = standard_construction_time
+	next_building = agot_barrow_04
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 02 }
+		building_steppehills_requirement_terrain = yes
+		county.culture = { has_cultural_tradition = agot_tradition_barrowman }
+		scope:holder.culture = { has_cultural_tradition = agot_tradition_barrowman }
+	}
+
+	is_enabled = {
+		scope:holder.culture = { has_cultural_tradition = agot_tradition_barrowman }
+		county.culture = { has_cultural_tradition = agot_tradition_barrowman }
+	}
+	
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_3_cost
+	
+	
+	province_modifier = {
+		defender_holding_advantage = normal_building_advantage_tier_6
+		additional_fort_level = normal_building_fort_level_tier_1
+		stationed_pikemen_toughness_mult = low_maa_toughness_tier_2
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_2
+		stationed_archers_damage_mult = high_maa_damage_tier_1
+	}
+	
+	character_modifier = {
+		monthly_dynasty_prestige_mult	= 0.1
+	}
+
+	
+	county_modifier ={
+		monthly_county_control_change_add = 0.4
+		county_opinion_add = 9
+	}
+
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
+
+agot_barrow_04 = {
+	construction_time = standard_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 04 }
+		building_steppehills_requirement_terrain = yes
+		county.culture = { has_cultural_tradition = agot_tradition_barrowman }
+		scope:holder.culture = { has_cultural_tradition = agot_tradition_barrowman }
+	}
+
+	is_enabled = {
+		scope:holder.culture = { has_cultural_tradition = agot_tradition_barrowman }
+		county.culture = { has_cultural_tradition = agot_tradition_barrowman }
+	}
+	
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = normal_building_tier_4_cost
+	
+	
+	character_modifier = {
+		monthly_dynasty_prestige_mult	= 0.15
+	}
+	
+	province_modifier = {
+		defender_holding_advantage = normal_building_advantage_tier_8
+		additional_fort_level = normal_building_fort_level_tier_2
+		stationed_pikemen_toughness_mult = low_maa_toughness_tier_3
+		stationed_pikemen_damage_mult = normal_maa_damage_tier_3
+		stationed_archers_damage_mult = high_maa_damage_tier_2
+	}
+
+	county_modifier ={
+		monthly_county_control_change_add = 0.3
+		county_opinion_add = 15
+	}
+
+	
+	ai_value = {
+		base = 10
+		ai_tier_1_building_modifier = yes
+		ai_tier_1_economical_building_preference_modifier = yes
+		ai_general_building_modifier = yes
+	}
+}
